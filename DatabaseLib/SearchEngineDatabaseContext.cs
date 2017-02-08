@@ -15,6 +15,7 @@ namespace DatabaseLib
             if (dropDatabase)
             {
                 Database.SetInitializer(new DropCreateDatabaseAlways<SearchEngineDatabaseContext>());
+                Console.WriteLine("Dropped database! Ohh yeah... It's gone.");
             }
         }
         public DbSet<Index> Indexes { get; set; }
