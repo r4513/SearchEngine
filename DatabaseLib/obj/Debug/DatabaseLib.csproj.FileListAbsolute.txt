@@ -1,0 +1,12 @@
+E:\pba\code\large systems\SearchEngine\DatabaseLib\obj\Debug\DatabaseLib.csprojResolveAssemblyReference.cache
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\SearchEngineDatabase.mdf
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\SearchEngineDatabase_log.ldf
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\DatabaseLib.dll.config
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\DatabaseLib.dll
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\DatabaseLib.pdb
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\EntityFramework.dll
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\EntityFramework.SqlServer.dll
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\EntityFramework.xml
+E:\pba\code\large systems\SearchEngine\DatabaseLib\bin\Debug\EntityFramework.SqlServer.xml
+E:\pba\code\large systems\SearchEngine\DatabaseLib\obj\Debug\DatabaseLib.dll
+E:\pba\code\large systems\SearchEngine\DatabaseLib\obj\Debug\DatabaseLib.pdb
