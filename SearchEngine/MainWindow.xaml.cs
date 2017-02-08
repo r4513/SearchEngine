@@ -59,7 +59,7 @@ namespace SearchEngine
                     if (!documentsAllreadyLookedAt.Contains(doc))
                     {
                         string searchResult = doc.Title;
-                        List<int> positions = DatabaseManager.GetPositionsFromIdexes(doc.DocumentId, term);
+                        List<int> positions = DatabaseManager.GetPositionsFromDocumentIdAndTerm(doc.DocumentId, term);
                         searchResult += "\nAt positions[";
                         foreach (int pos in positions)
                         {
