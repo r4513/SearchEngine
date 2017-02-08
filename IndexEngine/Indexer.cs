@@ -14,7 +14,7 @@ namespace IndexEngine
         public int DirectoryIndex { get; set; }
         public List<string> SearchDirectories { get; set; }
         private SearchEngineDatabaseManager DatabaseManager;
-        private Dictonary<string, int> termsInDatabase = new Dictonary<string, int>();
+        private Dictionary<string, int> termsInDatabase = new Dictionary<string, int>();
         public List<Observer> Observers { get; set; }
         public string StatusText { get; set; }
         public DateTime FileStartTime { get; set; }
@@ -28,6 +28,7 @@ namespace IndexEngine
         {
             StatusText = "Indexer initialized...";
             DatabaseManager = new SearchEngineDatabaseManager(dropDatabase);
+
             SearchDirectories = searchDirectories;
             Observers = new List<Observer>();
             DirectoryIndex = 0;
@@ -101,7 +102,7 @@ namespace IndexEngine
             TimeSpan directoryTime = DirectoryEndTime - DirectoryStartTime;
             StatusText = "Directory took: " + directoryTime.Milliseconds + " millisecond(s).";
             NotifyObservers(StatusText);
-            Console.WriteLine(StatusText);
+            //Console.WriteLine(StatusText);
         }
 
         private void IndexFile(string directory, string file)
@@ -128,18 +129,19 @@ namespace IndexEngine
             TimeSpan fileIndexTime = FileEndTime - FileStartTime;
             StatusText = "Took: " + fileIndexTime.Milliseconds + " millisecond(s).";
             NotifyObservers(StatusText);
-            Console.WriteLine(StatusText);
+            //Console.WriteLine(StatusText);
         }
 
         private int IndexLine(string line, string fileNameIncludingPath, int positionInFile)
         {
+            line = line.Replace('\t', ' ');
             string[] terms = line.Split(' ');
             int lastPositionUsed = positionInFile;
 
             foreach(string term in terms)
             {
                 //Console.WriteLine("Indexing term: " + term);
-                DatabaseManager.IndexTermFromDocument(lastPositionUsed, term, fileNameIncludingPath);
+                DatabaseManager.IndexTerm(lastPositionUsed, term, fileNameIncludingPath);
                 lastPositionUsed += term.Length;
                 lastPositionUsed++;
             }
